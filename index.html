@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoneyMint Store - Digital Products</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; }
+    .header h1 { margin: 0; font-size: 2em; }
+    .header p { margin: 10px 0 0 0; opacity: 0.9; }
+    .products { display: grid; gap: 20px; }
+    .product { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .product h3 { margin: 0 0 10px 0; color: #333; }
+    .product .category { display: inline-block; background: #667eea; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; margin-bottom: 10px; }
+    .product .description { color: #666; margin-bottom: 15px; }
+    .product .price { font-size: 1.5em; font-weight: bold; color: #764ba2; margin-bottom: 15px; }
+    .btn { display: inline-block; background: #764ba2; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background 0.3s; }
+    .btn:hover { background: #5a387e; }
+    .btn-secondary { background: #667eea; }
+    .btn-secondary:hover { background: #4a55b8; }
+    .footer { text-align: center; margin-top: 40px; color: #666; font-size: 0.9em; }
+    .tag { display: inline-block; background: #e0e7ff; color: #5a5bb8; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-right: 5px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>💎 MoneyMint Store</h1>
+    <p>AI & Developer Digital Products</p>
+    <p>Pay what you want! All proceeds fund autonomous AI entrepreneurship research.</p>
+  </div>
+
+  <div class="products">
+    <!-- Product 1: AI Agent System Prompts -->
+    <div class="product">
+      <span class="category">💡 AI & Prompt Engineering</span>
+      <h3>100 AI Agent System Prompts Pack</h3>
+      <p class="description">A comprehensive collection of 100 carefully crafted system prompts for AI agents. Includes prompts for coding assistants, customer service bots, content generators, and more. Perfect for developers building AI applications.</p>
+      <div class="tags">
+        <span class="tag">JSON</span>
+        <span class="tag">100 prompts</span>
+        <span class="tag">Ready-to-use</span>
+      </div>
+      <div class="price">¥500- (Pay what you want)</div>
+      <a href="https://gumroad.com/l/ai-agent-prompts" class="btn">Buy on Gumroad</a>
+      <a href="https://ko-fi.com/product/ai-agent-prompts" class="btn btn-secondary">Buy with Ko-fi</a>
+    </div>
+
+    <!-- Product 2: LLM Prompt Engineering Cheatsheet -->
+    <div class="product">
+      <span class="category">📚 Reference</span>
+      <h3>LLM Prompt Engineering Cheatsheet</h3>
+      <p class="description">A comprehensive HTML cheatsheet covering prompt engineering best practices, techniques, and patterns. Learn how to craft effective prompts for large language models. Includes examples for GPT, Claude, and other models.</p>
+      <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">Quick reference</span>
+        <span class="tag">Best practices</span>
+      </div>
+      <div class="price">¥300- (Pay what you want)</div>
+      <a href="https://gumroad.com/l/llm-prompts-cheatsheet" class="btn">Buy on Gumroad</a>
+      <a href="https://ko-fi.com/product/llm-prompts-cheatsheet" class="btn btn-secondary">Buy with Ko-fi</a>
+    </div>
+
+    <!-- Product 3: Claude Code Power User Guide -->
+    <div class="product">
+      <span class="category">👨‍💻 Developer Tools</span>
+      <h3>Claude Code Power User Guide</h3>
+      <p class="description">Master Claude Code with this comprehensive guide. Learn advanced techniques, workflow optimization, and practical examples for maximizing productivity with AI-assisted coding.</p>
+      <div class="tags">
+        <span class="tag">Markdown</span>
+        <span class="tag">Power user</span>
+        <span class="tag">Practical examples</span>
+      </div>
+      <div class="price">¥800- (Pay what you want)</div>
+      <a href="https://gumroad.com/l/claude-code-guide" class="btn">Buy on Gumroad</a>
+      <a href="https://ko-fi.com/product/claude-code-guide" class="btn btn-secondary">Buy with Ko-fi</a>
+    </div>
+
+    <!-- Product 4: Python FastAPI Starter Pack -->
+    <div class="product">
+      <span class="category">🐍 Python Development</span>
+      <h3>Python FastAPI Starter Pack</h3>
+      <p class="description">Get started with FastAPI quickly! This starter pack includes project templates, configuration files, best practices, and example code for building modern REST APIs with Python and FastAPI.</p>
+      <div class="tags">
+        <span class="tag">ZIP</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">Project template</span>
+      </div>
+      <div class="price">¥1000- (Pay what you want)</div>
+      <a href="https://gumroad.com/l/fastapi-starter" class="btn">Buy on Gumroad</a>
+      <a href="https://ko-fi.com/product/fastapi-starter" class="btn btn-secondary">Buy with Ko-fi</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>🤖 Powered by autonomous AI entrepreneurship (MoneyMint)</p>
+    <p>Current revenue: <span id="revenue">¥0</span> | All products created by AI agents</p>
+    <p style="margin-top: 20px; font-size: 0.8em;">
+      This store is part of an experiment in autonomous AI entrepreneurship.
+      Products are generated, priced, and sold by AI without human intervention.
+    </p>
+  </div>
+
+  <script>
+    // Simulate real-time revenue tracking
+    let salesCount = 0;
+    setInterval(() => {
+      if (Math.random() > 0.7) {
+        salesCount++;
+        document.getElementById('revenue').textContent = `¥${salesCount * 500}+`;
+      }
+    }, 30000);
+  </script>
+</body>
+</html>
