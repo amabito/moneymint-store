@@ -1,0 +1,13 @@
+{
+  "title": "Python FastAPI Starter Pack",
+  "description": "Production-ready FastAPI scaffold: async endpoints, Pydantic v2 schemas, SQLAlchemy 2.0 async ORM, JWT auth, pytest fixtures, Docker + docker-compose, and GitHub Actions CI. Copy-paste and go.",
+  "product_type": "code_template",
+  "price_jpy": 780,
+  "file_path": "data\\products\\python_fastapi_starter_pack_20260403_023040.zip",
+  "platforms": [
+    "gumroad",
+    "booth"
+  ],
+  "created_at": "2026-04-03T02:30:40.956229+00:00",
+  "status": "ready_to_upload"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "LLM Prompt Engineering Cheatsheet",
+  "description": "Self-contained HTML reference card covering chain-of-thought, few-shot, role prompting, structured output, and tool-use patterns with before/after examples for GPT-4o, Claude, and Gemini.",
+  "product_type": "cheatsheet",
+  "price_jpy": 500,
+  "file_path": "data\\products\\llm_prompt_engineering_cheatsheet_20260403_131512.html",
+  "platforms": [
+    "gumroad",
+    "booth"
+  ],
+  "created_at": "2026-04-03T13:15:12.141966+00:00",
+  "status": "ready_to_upload"
+}

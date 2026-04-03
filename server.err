@@ -1,0 +1,125 @@
+::ffff:127.0.0.1 - - [03/Apr/2026 21:57:32] "HEAD / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 21:57:33] "HEAD / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 21:57:34] "HEAD /checkout.html?product=ai_agent_prompt_pack_100_system_prompts_20260403_105953&channel=gumroad HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 21:57:48] "GET / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 21:57:50] "GET /index.html HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 21:57:50] "GET /checkout.html?product=ai_agent_prompt_pack_100_system_prompts_20260403_105953&channel=gumroad HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 21:57:51] "GET /checkout.html?product=llm_prompt_engineering_cheatsheet_20260403_105953&channel=booth HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 21:57:52] "GET /checkout.html?product=python_fastapi_starter_pack_20260403_023040&channel=gumroad HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 21:57:53] "GET /products/ai_agent_prompt_pack_100_system_prompts_20260403_105953.json HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 21:57:54] "GET /products/llm_prompt_engineering_cheatsheet_20260403_105953.html HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 21:57:54] "GET /products/python_fastapi_starter_pack_20260403_023040.zip HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [03/Apr/2026 21:59:56] "GET / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 21:59:57] "GET / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:00:27] "GET / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:00:27] "GET /checkout.html?product=ai_agent_prompt_pack_100_system_prompts_20260403_012804&channel=kofi HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:00:28] "GET /checkout.html?product=ai_agent_prompt_pack_100_system_prompts_20260403_012804&channel=gumroad HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:00:29] code 404, message File not found
+::1 - - [03/Apr/2026 22:00:29] "GET /products/ai_agent_prompt_pack_100_system_prompts_20260403_012804.json HTTP/1.1" 404 -
+::1 - - [03/Apr/2026 22:00:30] code 404, message File not found
+::1 - - [03/Apr/2026 22:00:30] "GET /products/ai_agent_prompt_pack_100_system_prompts_20260403_012804_manifest.json HTTP/1.1" 404 -
+::1 - - [03/Apr/2026 22:00:31] "GET /checkout.html?product=ai_agent_prompt_pack_100_system_prompts_20260403_013310&channel=booth HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:00:32] code 404, message File not found
+::1 - - [03/Apr/2026 22:00:32] "GET /products/ai_agent_prompt_pack_100_system_prompts_20260403_013310.json HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [03/Apr/2026 22:00:32] "GET / HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [03/Apr/2026 22:00:32] "GET /checkout.html?product=ai_agent_prompt_pack_100_system_prompts_20260403_012824&channel=booth HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:00:32] "GET /checkout.html?product=ai_agent_prompt_pack_100_system_prompts_20260403_013310&channel=booth HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [03/Apr/2026 22:05:02] "HEAD / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:05:02] "HEAD / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:05:19] "HEAD / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:05:20] "HEAD /checkout.html HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:05:21] code 404, message File not found
+::1 - - [03/Apr/2026 22:05:21] "HEAD /products/ai_agent_prompt_pack_100_system_prompts_20260403_074122.html HTTP/1.1" 404 -
+::1 - - [03/Apr/2026 22:05:21] code 404, message File not found
+::1 - - [03/Apr/2026 22:05:21] "HEAD /products/ai_agent_prompt_pack_100_system_prompts_20260403_075217.html HTTP/1.1" 404 -
+::1 - - [03/Apr/2026 22:05:22] "HEAD /products/ai_agent_prompt_pack_100_system_prompts_20260403_075551.json HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:05:23] code 404, message File not found
+::1 - - [03/Apr/2026 22:05:23] "HEAD /products/nonexistent.html HTTP/1.1" 404 -
+::1 - - [03/Apr/2026 22:05:24] "HEAD /checkout.html?product=ai_agent_prompt_pack_100_system_prompts_20260403_074122&channel=wallet HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:05:24] code 404, message File not found
+::1 - - [03/Apr/2026 22:05:24] "HEAD /products/index.html HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [03/Apr/2026 22:10:09] "HEAD / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:10] "HEAD / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:28] "HEAD / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:29] "HEAD /checkout.html HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:30] "HEAD /products HTTP/1.1" 301 -
+::1 - - [03/Apr/2026 22:10:30] "HEAD /products/ HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:31] code 404, message File not found
+::1 - - [03/Apr/2026 22:10:31] "HEAD /products/cli-cheatsheet HTTP/1.1" 404 -
+::1 - - [03/Apr/2026 22:10:32] code 404, message File not found
+::1 - - [03/Apr/2026 22:10:32] "HEAD /products/prompt-architecture HTTP/1.1" 404 -
+::1 - - [03/Apr/2026 22:10:32] code 404, message File not found
+::1 - - [03/Apr/2026 22:10:32] "HEAD /products/template-pack HTTP/1.1" 404 -
+::1 - - [03/Apr/2026 22:10:33] "HEAD /products HTTP/1.1" 301 -
+::1 - - [03/Apr/2026 22:10:34] "HEAD /products/ HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:34] "HEAD /checkout.html?product=cli-cheatsheet HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:35] "HEAD /checkout.html?product=prompt-architecture HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:36] "HEAD /checkout.html?product=template-pack HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:37] "HEAD /checkout.html?channel=wallet HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:37] code 404, message File not found
+::1 - - [03/Apr/2026 22:10:37] "HEAD /docs/ HTTP/1.1" 404 -
+::1 - - [03/Apr/2026 22:10:42] "HEAD / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:43] "HEAD /checkout.html HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:44] "HEAD /products HTTP/1.1" 301 -
+::1 - - [03/Apr/2026 22:10:44] "HEAD /products/ HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:45] "HEAD /checkout.html?product=cli-cheatsheet HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:46] "HEAD /checkout.html?product=prompt-architecture HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:47] "HEAD /checkout.html?product=template-pack HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:10:48] code 404, message File not found
+::1 - - [03/Apr/2026 22:10:48] "HEAD /docs/ HTTP/1.1" 404 -
+::1 - - [03/Apr/2026 22:10:49] "HEAD /checkout.html?channel=wallet HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [03/Apr/2026 22:14:55] "GET / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:14:56] "GET / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:15:04] "GET / HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:15:05] "GET /checkout.html HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:15:05] "GET /checkout.html?product=default&channel=wallet HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:15:06] "GET /products HTTP/1.1" 301 -
+::1 - - [03/Apr/2026 22:15:06] "GET /products/ HTTP/1.1" 200 -
+::1 - - [03/Apr/2026 22:15:07] code 404, message File not found
+::1 - - [03/Apr/2026 22:15:07] "GET /product/cheatsheet HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [03/Apr/2026 22:15:08] "GET / HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [03/Apr/2026 22:15:08] "GET /checkout.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [03/Apr/2026 22:15:08] code 404, message File not found
+::ffff:127.0.0.1 - - [03/Apr/2026 22:15:08] "GET /product/cheatsheet HTTP/1.1" 404 -
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('::1', 58458, 0, 0)
+Exception occurred during processing of request from ('::1', 58445, 0, 0)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Users\amabito\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 691, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\amabito\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 691, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\amabito\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 1310, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Users\amabito\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 1310, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Users\amabito\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 671, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\amabito\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 671, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\amabito\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 755, in __init__
+    self.handle()
+  File "C:\Users\amabito\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 755, in __init__
+    self.handle()
+  File "C:\Users\amabito\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\amabito\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\amabito\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\amabito\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\amabito\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\amabito\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+ConnectionResetError: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+----------------------------------------
+----------------------------------------

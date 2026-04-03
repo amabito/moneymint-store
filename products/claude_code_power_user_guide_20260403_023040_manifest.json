@@ -1,0 +1,13 @@
+{
+  "title": "Claude Code Power User Guide",
+  "description": "Comprehensive tutorial covering Claude Code slash commands, custom CLAUDE.md setup, multi-agent workflows, and real-world project examples. Targets developers new to agentic coding.",
+  "product_type": "ebook_tutorial",
+  "price_jpy": 980,
+  "file_path": "data\\products\\claude_code_power_user_guide_20260403_023040.md",
+  "platforms": [
+    "gumroad",
+    "booth"
+  ],
+  "created_at": "2026-04-03T02:30:40.952581+00:00",
+  "status": "ready_to_upload"
+}

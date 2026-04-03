@@ -1,0 +1,5 @@
+Host serveo
+  HostName serveo.net
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  LogLevel QUIET

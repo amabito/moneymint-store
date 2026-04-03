@@ -1,0 +1,11 @@
+{
+  "updated_at": "2026-04-03T13:26:00Z",
+  "storefront_url": "https://polite-turkeys-pick.loca.lt",
+  "global": {
+    "gumroad": "./checkout.html?product={slug}&channel=gumroad",
+    "ko_fi": "./checkout.html?product={slug}&channel=kofi",
+    "booth": "./checkout.html?product={slug}&channel=booth",
+    "sample_note": "Checkout is live via hosted storefront. If marketplace links are unavailable, manual wallet transfer is shown in checkout."
+  },
+  "products": {}
+}

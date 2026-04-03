@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM Prompt Engineering Cheatsheet</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f0f1a; color: #e0e0f0; padding: 2rem; }
+  h1 { font-size: 1.8rem; margin-bottom: 0.4rem; color: #a78bfa; }
+  .subtitle { color: #94a3b8; margin-bottom: 2rem; font-size: 0.95rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.2rem; }
+  .card { background: #1e1e2e; border: 1px solid #2d2d4a; border-radius: 10px; padding: 1.2rem; }
+  .card h2 { font-size: 1rem; color: #7dd3fc; margin-bottom: 0.8rem; border-bottom: 1px solid #2d2d4a; padding-bottom: 0.5rem; }
+  ul { list-style: none; }
+  li { padding: 0.3rem 0; font-size: 0.88rem; border-bottom: 1px solid #1a1a2e; color: #cbd5e1; }
+  li:last-child { border-bottom: none; }
+  code { background: #12122a; color: #86efac; padding: 0.1rem 0.4rem; border-radius: 4px; font-family: 'Fira Code', monospace; font-size: 0.82rem; }
+  .footer { margin-top: 2rem; color: #475569; font-size: 0.8rem; text-align: center; }
+</style>
+</head>
+<body>
+<h1>LLM Prompt Engineering Cheatsheet</h1>
+<p class="subtitle">Self-contained HTML reference card covering chain-of-thought, few-shot, role prompting, structured output, and tool-use patterns with before/after examples for GPT-4o, Claude, and Gemini.</p>
+<div class="grid">
+
+        <div class="card">
+          <h2>Chain-of-Thought</h2>
+          <ul>
+            <li>Add: "Think step by step before answering"</li><li>Add: "Show your reasoning in numbered steps"</li><li>Zero-shot CoT: just append "Let's think step by step"</li><li>Few-shot CoT: include worked examples with reasoning</li><li>Use for: math, logic, multi-step reasoning</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Role Prompting</h2>
+          <ul>
+            <li>"You are a senior software engineer with 10 years of Python experience"</li><li>Add domain constraints: "You only answer about security topics"</li><li>Tone control: "Respond concisely, no filler phrases"</li><li>Persona lock: put role in SYSTEM, task in USER</li><li>Avoid: vague roles like "helpful assistant"</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Structured Output</h2>
+          <ul>
+            <li>"Respond with a JSON object matching this schema: {...}"</li><li>"Output ONLY the JSON. No prose before or after."</li><li><code>Use Claude/GPT response_format={type:"json_object"}</code></li><li>Provide a one-shot example of the target JSON</li><li><code>Validate with Pydantic: model_validate_json(response)</code></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Few-Shot Examples</h2>
+          <ul>
+            <li><code>Input: [example] -> Output: [example] (3-5 pairs)</code></li><li>Order matters: put most relevant examples last</li><li>Format: Q: ... A: ... for simple classification</li><li>Use diverse examples to prevent shortcut learning</li><li>Balance positive/negative classes in examples</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Tool Use / Function Calling</h2>
+          <ul>
+            <li><code>Define tools with strict JSON Schema (avoid additionalProperties)</code></li><li>Use required[] to mark mandatory parameters</li><li>Descriptions are part of the prompt -- be specific</li><li>"Use the search tool if you are unsure about recent events"</li><li>Handle parallel tool calls: gpt-4o/claude support multiple</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Context Management</h2>
+          <ul>
+            <li><code>Put instructions at the TOP (primacy effect)</code></li><li><code>Repeat critical rules at the BOTTOM (recency effect)</code></li><li>Use XML tags to delimit sections: <context>...</context></li><li>Summarize long docs before including them</li><li><code>Cache-friendly: put stable content (instructions) before dynamic</code></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Anti-Patterns to Avoid</h2>
+          <ul>
+            <li>"Be creative AND precise" -- contradictory constraints</li><li>Negative-only instructions: "Don't do X" -- add "Instead, do Y"</li><li>Ambiguous length: "short" -- use "under 200 words"</li><li>Sycophancy triggers: "Please" / "Thank you" in every turn</li><li>Prompt injection risk: never concatenate raw user input into system</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Model-Specific Notes</h2>
+          <ul>
+            <li>GPT-4o: strong at structured output + vision</li><li>Claude 3.5+: best at long-context, instruction following</li><li>Gemini 2.0 Flash: fast + grounded search built-in</li><li>Llama 3.2: good for local/private, needs explicit format</li><li>All: temperature 0 for deterministic extraction tasks</li>
+          </ul>
+        </div>
+</div>
+<p class="footer">Generated by MoneyMint -- 2026-04-03</p>
+</body>
+</html>

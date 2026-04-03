@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MoneyMint Checkout</title>
+<style>
+  :root {--bg:#0f172a;--card:#111827;--text:#e5e7eb;--muted:#94a3b8;--accent:#7c3aed;--ok:#22c55e;}
+  body {margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(1200px 600px at 10% 10%, #111827, var(--bg));color:var(--text);}
+  .wrap{max-width:720px;margin:28px auto;padding:24px;}
+  .card{background:var(--card);border:1px solid #1f2937;border-radius:14px;padding:20px;}
+  .muted{color:var(--muted)}
+  .btn{display:inline-block;text-decoration:none;padding:10px 12px;border-radius:10px;margin:6px 6px 0 0;background:var(--accent);color:white}
+  .btn.secondary{background:#374151}
+  .btn.ok{background:var(--ok)}
+  .btn.warn{background:#dc2626}
+  .hidden{display:none}
+  small{color:#cbd5e1}
+  code{background:#1f2937;padding:2px 5px;border-radius:6px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>MoneyMint Checkout</h1>
+      <div id="missing" class="hidden"> 
+        <p>Product not found. Open one of the links from the MoneyMint Store.</p>
+        <a class="btn" href="./index.html">Back to Store</a>
+      </div>
+      <div id="product" class="hidden">
+        <h2 id="title"></h2>
+        <p id="desc" class="muted"></p>
+        <p><strong>Price:</strong> <span id="price"></span></p>
+        <div id="links"></div>
+        <p class="muted">If marketplace checkout is not configured yet, use this manual payment method:</p>
+        <div id="manual" class="muted"></div>
+        <p><a id="preview" class="btn secondary" href="#">Preview file</a>
+           <a class="btn" href="./index.html">Back to store</a></p>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const WALLET = '0x2Bc21f14fED02A8EB765A3377b6416dd1177350d';
+  const CHAIN = 'Base L2 (8453)';
+  const params = new URLSearchParams(location.search);
+  const slug = params.get('product');
+  const channel = params.get('channel') || 'gumroad';
+  const elMissing = document.getElementById('missing');
+  const elProduct = document.getElementById('product');
+  const status = document.getElementById('manual');
+
+  if (!slug) {
+    elMissing.classList.remove('hidden');
+    throw new Error('no product');
+  }
+
+  fetch('./featured_products.json')
+    .then(r => r.ok ? r.json() : Promise.reject(r.statusText))
+    .then(list => {
+      const p = list.find(x => x.slug === slug);
+      if (!p) throw new Error('not found');
+
+      document.getElementById('title').textContent = p.title;
+      document.getElementById('desc').textContent = p.description;
+      document.getElementById('price').textContent = `¥${p.price_jpy}`;
+      document.getElementById('preview').href = p.preview;
+
+      const links = document.getElementById('links');
+      const payment = p.payment || {};
+      const currentPath = new URL(location.href);
+      const asSelf = (url) => {
+        try {
+          const u = new URL(url, currentPath);
+          return u.pathname === currentPath.pathname && u.search === currentPath.search;
+        } catch {
+          return false;
+        }
+      };
+
+      const channelMap = {
+        gumroad: { label: 'Buy on Gumroad', cls: 'btn' },
+        kofi: { label: 'Buy on Ko-fi', cls: 'btn secondary' },
+        booth: { label: 'Buy on BOOTH', cls: 'btn secondary' },
+      };
+
+      const chosen = payment[channel] || payment.gumroad || '#';
+      Object.entries(channelMap).forEach(([ch, meta]) => {
+        const u = payment[ch] || '#';
+        const safeUrl = u && u !== '#';
+        links.insertAdjacentHTML('beforeend',
+          `<a class="${meta.cls}" href="${safeUrl}" target="_blank" rel="noopener">${meta.label}</a>`
+        );
+      });
+
+      if (asSelf(chosen)) {
+        links.insertAdjacentHTML('beforeend', `<a class="btn warn" href="#" id="manualBtn">Use wallet transfer</a>`);
+        const openWallet = `Send the exact product amount to this wallet address on ${CHAIN}: <strong>${WALLET}</strong>`;
+        status.innerHTML = `${openWallet}<br/>` +
+          `<small>We currently route sales via direct wallet settlement for this channel until Gumroad/Ko-fi/BOOTH links are connected.</small>`;
+
+        const btn = document.getElementById('manualBtn');
+        btn.addEventListener('click', async (e) => {
+          e.preventDefault();
+          try {
+            await navigator.clipboard.writeText(WALLET);
+            btn.textContent = 'Wallet address copied';
+          } catch {
+            btn.textContent = 'Copy blocked in browser; address shown above';
+          }
+        });
+        links.insertAdjacentHTML('beforeend', `<p class="muted"><small>You can also share this order with <code>/checkout.html?channel=${encodeURIComponent(channel)}&product=${encodeURIComponent(slug)}</code></small></p>`);
+      }
+
+      elProduct.classList.remove('hidden');
+    })
+    .catch(() => {
+      elMissing.classList.remove('hidden');
+    });
+</script>
+</body>
+</html>

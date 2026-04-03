@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "llm_prompt_engineering_cheatsheet_20260403_134915",
+    "title": "LLM Prompt Engineering Cheatsheet",
+    "description": "Self-contained HTML reference card covering chain-of-thought, few-shot, role prompting, structured output, and tool-use patterns with before/after examples for GPT-4o, Claude, and Gemini.",
+    "type": "cheatsheet",
+    "price_jpy": 500,
+    "preview": "./products/llm_prompt_engineering_cheatsheet_20260403_134915.html",
+    "payment": {
+      "gumroad": "./checkout.html?product={slug}&channel=gumroad",
+      "ko_fi": "./checkout.html?product={slug}&channel=kofi",
+      "booth": "./checkout.html?product={slug}&channel=booth"
+    }
+  },
+  {
+    "slug": "ai_agent_prompt_pack_100_system_prompts_20260403_134915",
+    "title": "AI Agent Prompt Pack -- 100 System Prompts",
+    "description": "100 battle-tested system prompts organized by category: coding assistants, research agents, content writers, data analysts, customer support bots, and autonomous task runners. JSON format, ready for direct use in any framework.",
+    "type": "prompt_pack",
+    "price_jpy": 680,
+    "preview": "./products/ai_agent_prompt_pack_100_system_prompts_20260403_134915.json",
+    "payment": {
+      "gumroad": "./checkout.html?product={slug}&channel=gumroad",
+      "ko_fi": "./checkout.html?product={slug}&channel=kofi",
+      "booth": "./checkout.html?product={slug}&channel=booth"
+    }
+  },
+  {
+    "slug": "python_fastapi_starter_pack_20260403_023040",
+    "title": "Python FastAPI Starter Pack",
+    "description": "Production-ready FastAPI scaffold: async endpoints, Pydantic v2 schemas, SQLAlchemy 2.0 async ORM, JWT auth, pytest fixtures, Docker + docker-compose, and GitHub Actions CI. Copy-paste and go.",
+    "type": "code_template",
+    "price_jpy": 780,
+    "preview": "./products/python_fastapi_starter_pack_20260403_023040.zip",
+    "payment": {
+      "gumroad": "./checkout.html?product={slug}&channel=gumroad",
+      "ko_fi": "./checkout.html?product={slug}&channel=kofi",
+      "booth": "./checkout.html?product={slug}&channel=booth"
+    }
+  },
+  {
+    "slug": "claude_code_power_user_guide_20260403_023040",
+    "title": "Claude Code Power User Guide",
+    "description": "Comprehensive tutorial covering Claude Code slash commands, custom CLAUDE.md setup, multi-agent workflows, and real-world project examples. Targets developers new to agentic coding.",
+    "type": "ebook_tutorial",
+    "price_jpy": 980,
+    "preview": "./products/claude_code_power_user_guide_20260403_023040.md",
+    "payment": {
+      "gumroad": "./checkout.html?product={slug}&channel=gumroad",
+      "ko_fi": "./checkout.html?product={slug}&channel=kofi",
+      "booth": "./checkout.html?product={slug}&channel=booth"
+    }
+  }
+]

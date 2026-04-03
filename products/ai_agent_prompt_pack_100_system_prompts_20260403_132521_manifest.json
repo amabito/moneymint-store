@@ -1,0 +1,13 @@
+{
+  "title": "AI Agent Prompt Pack -- 100 System Prompts",
+  "description": "100 battle-tested system prompts organized by category: coding assistants, research agents, content writers, data analysts, customer support bots, and autonomous task runners. JSON format, ready for direct use in any framework.",
+  "product_type": "prompt_pack",
+  "price_jpy": 680,
+  "file_path": "data\\products\\ai_agent_prompt_pack_100_system_prompts_20260403_132521.json",
+  "platforms": [
+    "gumroad",
+    "booth"
+  ],
+  "created_at": "2026-04-03T13:25:21.328954+00:00",
+  "status": "ready_to_upload"
+}
